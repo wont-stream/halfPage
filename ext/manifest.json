@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "halfPage",
   "description": "Use halfPage as your Startpage.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "browser_specific_settings": {
     "gecko": {
       "id": "halfPage@new-tab.ipv4.army"
