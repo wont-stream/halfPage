@@ -1,17 +1,17 @@
 {
-  "manifest_version": 3,
-  "name": "halfPage",
-  "description": "Use halfPage as your Startpage.",
-  "version": "0.0.2",
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "halfPage@new-tab.ipv4.army"
-    }
-  },
-  "icons": {
-    "64": "icons/icon.png"
-  },
-  "chrome_url_overrides": {
-    "newtab": "dist/index.html"
-  }
+	"manifest_version": 3,
+	"name": "halfPage",
+	"description": "Use halfPage as your Startpage.",
+	"version": "0.0.2",
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "halfPage@new-tab.ipv4.army"
+		}
+	},
+	"icons": {
+		"64": "icons/icon.png"
+	},
+	"chrome_url_overrides": {
+		"newtab": "dist/index.html"
+	}
 }

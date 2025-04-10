@@ -1,15 +1,15 @@
-import Navbar from './navbar';
-import Container from './container';
-import Sidebar from './sidebar';
+import Container from "./container";
+import Navbar from "./navbar";
+import Sidebar from "./sidebar";
 
-import './app.css';
+import "./app.css";
 
 export default () => {
-  return (
-    <>
-      <Navbar />
-      <Container />
-      <Sidebar />
-    </>
-  )
-}
+	return (
+		<>
+			<Navbar />
+			<Container />
+			<Sidebar />
+		</>
+	);
+};
