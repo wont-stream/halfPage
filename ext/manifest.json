@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "halfPage",
+  "description": "Use halfPage as your Startpage.",
+  "version": "0.0.1",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "halfPage@new-tab.ipv4.army"
+    }
+  },
+  "optional_permissions": [
+    "geolocation"
+  ],
+  "icons": {
+    "64": "icons/icon.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "dist/index.html"
+  }
+}
