@@ -48,8 +48,8 @@ export default () => {
             <nav class="navbar shadow fixed-top" style="background-color: var(--bs-content-bg); border-bottom: var(--bs-border-width) solid var(--bs-content-border-color);">
                 <div class="container-fluid">
                     <div class="navbar-brand">
+                    {wttrDesc}
                         <img src={imgSrc} alt="Logo" width="24" height="24" class="d-inline-block align-text-top" />
-                        {wttrDesc}
                     </div>
                     <span class="navbar-text">
                         {weather}
