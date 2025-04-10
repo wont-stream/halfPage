@@ -8,9 +8,6 @@
       "id": "halfPage@new-tab.ipv4.army"
     }
   },
-  "optional_permissions": [
-    "geolocation"
-  ],
   "icons": {
     "64": "icons/icon.png"
   },
