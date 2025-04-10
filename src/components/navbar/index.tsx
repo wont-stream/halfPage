@@ -17,7 +17,7 @@ export default () => {
                     <div class="navbar-brand">
                         {wttrDesc}
                     </div>
-                    <div class="d-flex hstack gap-2" role="search">
+                    <div class="d-flex hstack gap-2">
                         <button type="button" class="btn btn-outline-light btn-sm" onClick={history.back}><ChevronLeft size={20} /></button>
                         <button type="button" class="btn btn-outline-light btn-sm" onClick={history.forward}><ChevronRight size={20} /></button>
                     </div>

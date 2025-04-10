@@ -5,7 +5,7 @@ export default () => {
                 <h6 class="display-4">Hello, {localStorage.getItem("name")}.</h6>
                 <br />
                 <br />
-                <form role="search" action={localStorage.getItem("searchEngine") || ""} method="get">
+                <form action={localStorage.getItem("searchEngine") || ""} method="get">
                     <input class="form-control me-2" type="search" placeholder={`Search with ${localStorage.getItem("searchEngineName")}`} aria-label="Search with Google" name="q" />
                 </form>
             </div>

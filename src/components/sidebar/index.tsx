@@ -1,4 +1,4 @@
-const dataset = document.getElementById("html")?.dataset!;
+const dataset = document.documentElement.dataset;
 
 export default () => {
     return (
