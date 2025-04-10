@@ -37,11 +37,24 @@ export default () => {
         setWttrDesc(`${weatherDesc.description} & ${dayOrNight}`);
     }
 
-    (async () => {
+    const getAproximateLocation = async () => {
         const req = await fetch("https://cf.ipv4-army.workers.dev/")
         const res = await req.json();
         return await getWeather(res);
-    })()
+    }
+
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition((position) => {
+            const coords = position.coords;
+            getWeather(coords);
+        }, getAproximateLocation, {
+            enableHighAccuracy: true,
+            maximumAge: 30 * 60 * 1000, // 30 minutes
+            timeout: 5000
+        });
+    } else {
+        getAproximateLocation();
+    }
 
     return (
         <>
