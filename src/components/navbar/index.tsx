@@ -3,6 +3,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-preact';
 
 import desc from "./desc.json";
 
+const favicon = document.getElementById("favicon") as HTMLLinkElement;
+
 const fetchWeather = async (lat: number, long: number) => {
     const req = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${long}&current=temperature_2m,is_day,weather_code&timezone=${Intl.DateTimeFormat().resolvedOptions().timeZone}`)
     const res = await req.json();
@@ -31,6 +33,7 @@ export default () => {
 
         setWeather(`${weather.current.temperature_2m}°C`);
         setSrc(weatherDesc.image);
+        favicon.href = weatherDesc.image;
         setWttrDesc(`${weatherDesc.description} & ${dayOrNight}`);
     }
 
