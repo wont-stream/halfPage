@@ -17,7 +17,7 @@ export default defineConfig({
           })
         ]
       }
-    } : {transformer: "lightningcss"} 
+    } : { transformer: "lightningcss" }
   },
   build: {
     cssMinify: "lightningcss",

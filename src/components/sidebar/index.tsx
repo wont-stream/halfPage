@@ -93,7 +93,7 @@ export default () => {
                 </ul>
                 <hr class="sidebar-divider" />
 
-                <button class="btn btn-secondary" type={"button"} onClick={() => {localStorage.setItem("sidebar", "false"); location.reload()}}>Save & Close</button>
+                <button class="btn btn-secondary" type={"button"} onClick={() => { localStorage.setItem("sidebar", "false"); location.reload() }}>Save & Close</button>
 
                 <hr class="sidebar-divider" />
                 <h6>About</h6>
