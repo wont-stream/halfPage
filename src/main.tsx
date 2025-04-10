@@ -5,7 +5,7 @@ import 'halfmoon/css/cores/halfmoon.modern.css';
 import 'halfmoon/css/cores/halfmoon.elegant.css';
 import App from './components/app.tsx'
 
-const dataset = document.getElementById("html")!.dataset;
+const dataset = document.getElementById("html")?.dataset!;
 
 const colorScheme = localStorage.getItem("colorScheme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light") || "auto";
 if (colorScheme === "auto") {

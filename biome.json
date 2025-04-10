@@ -27,7 +27,6 @@
 		"formatter": {
 			"quoteStyle": "double",
 			"indentStyle": "tab",
-			"lineEnding": "lf",
 			"jsxQuoteStyle": "double",
 			"semicolons": "always"
 		}

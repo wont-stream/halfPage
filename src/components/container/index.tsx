@@ -6,7 +6,7 @@ export default () => {
                 <br />
                 <br />
                 <form role="search" action={localStorage.getItem("searchEngine") || ""} method="get">
-                    <input class="form-control me-2" autoFocus type="search" placeholder={`Search with ${localStorage.getItem("searchEngineName")}`} aria-label="Search with Google" name="q" />
+                    <input class="form-control me-2" type="search" placeholder={`Search with ${localStorage.getItem("searchEngineName")}`} aria-label="Search with Google" name="q" />
                 </form>
             </div>
         </>

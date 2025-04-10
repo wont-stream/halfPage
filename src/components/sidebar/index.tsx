@@ -1,4 +1,4 @@
-const dataset = document.getElementById("html")!.dataset;
+const dataset = document.getElementById("html")?.dataset!;
 
 export default () => {
     return (
@@ -7,16 +7,16 @@ export default () => {
 
             <div class="offcanvas-header border-bottom border-secondary border-opacity-25">
 
-                <a class="sidebar-brand" href="#">
+                <span class="sidebar-brand">
                     .
-                </a>
+                </span>
 
-                <button type="button" class="btn-close d-md-none" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#sidebar-example"></button>
+                <button type="button" class="btn-close d-md-none" data-bs-dismiss="offcanvas" data-bs-target="#sidebar-example" />
 
             </div>
 
             <div class="offcanvas-body">
-                <label>Name</label>
+                <h6>Name</h6>
                 <form class="d-flex" id="name" onSubmit={(e) => {
                     e.preventDefault();
                     const form = document.forms.namedItem("name");
@@ -25,13 +25,13 @@ export default () => {
                     }
                 }}>
 
-                    <input name="userName" class="form-control me-2" placeholder="Set Name" aria-label="Set Name" />
+                    <input name="userName" class="form-control me-2" placeholder="Set Name" />
 
                     <button class="btn btn-primary" type="submit">Save</button>
 
                 </form>
                 <hr class="sidebar-divider" />
-                <label>Search Engine</label>
+                <h6>Search Engine</h6>
                 <form id="searchEngine" onSubmit={(e) => {
                     e.preventDefault();
                     const form = document.forms.namedItem("searchEngine");
@@ -41,15 +41,15 @@ export default () => {
                     }
                 }}>
 
-                    <input name="engine" class="form-control me-2" placeholder="e.g. https://google.com/search" aria-label="Set Search Engine" />
+                    <input name="engine" class="form-control me-2" placeholder="e.g. https://google.com/search" />
                     <br />
-                    <input name="engineName" class="form-control me-2" placeholder="e.g. Google" aria-label="Set Search Engine Name" />
+                    <input name="engineName" class="form-control me-2" placeholder="e.g. Google" />
                     <br />
                     <button class="btn btn-primary" type="submit">Save</button>
 
                 </form>
                 <hr class="sidebar-divider" />
-                <label>Weather Location</label>
+                <h6>Weather Location</h6>
                 <form class="d-flex" id="weatherLocation" onSubmit={(e) => {
                     e.preventDefault();
                     const form = document.forms.namedItem("weatherLocation");
@@ -58,45 +58,45 @@ export default () => {
                     }
                 }}>
 
-                    <input name="location" class="form-control me-2" placeholder="Leave blank for current location" aria-label="Set Search Engine" />
+                    <input name="location" class="form-control me-2" placeholder="Leave blank for current location" />
 
                     <button class="btn btn-primary" type="submit">Save</button>
 
                 </form>
 
                 <hr class="sidebar-divider" />
-                <label>Color Scheme</label>
+                <h6>Color Scheme</h6>
                 <ul class="nav nav-pills nav-fill">
                     <li class="nav-item">
-                        <button class="btn btn-primary" onClick={() => { localStorage.setItem("colorScheme", "auto"); location.reload() }}>Auto</button>
+                        <button class="btn btn-primary" type={"button"} onClick={() => { localStorage.setItem("colorScheme", "auto"); location.reload() }}>Auto</button>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-primary" onClick={() => { localStorage.setItem("colorScheme", "light"); dataset.bsTheme = "light" }}>Light</button>
+                        <button class="btn btn-primary" type={"button"} onClick={() => { localStorage.setItem("colorScheme", "light"); dataset.bsTheme = "light" }}>Light</button>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-primary" onClick={() => { localStorage.setItem("colorScheme", "dark"); dataset.bsTheme = "dark" }}>Dark</button>
+                        <button class="btn btn-primary" type={"button"} onClick={() => { localStorage.setItem("colorScheme", "dark"); dataset.bsTheme = "dark" }}>Dark</button>
                     </li>
                 </ul>
 
                 <hr class="sidebar-divider" />
-                <label>Theme</label>
+                <h6>Theme</h6>
                 <ul class="nav nav-pills nav-fill">
                     <li class="nav-item">
-                        <button class="btn btn-primary" onClick={() => { localStorage.setItem("theme", "default"); dataset.bsCore = "default" }}>Default</button>
+                        <button class="btn btn-primary" type={"button"} onClick={() => { localStorage.setItem("theme", "default"); dataset.bsCore = "default" }}>Default</button>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-primary" onClick={() => { localStorage.setItem("theme", "modern"); dataset.bsCore = "modern" }}>Modern</button>
+                        <button class="btn btn-primary" type={"button"} onClick={() => { localStorage.setItem("theme", "modern"); dataset.bsCore = "modern" }}>Modern</button>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-primary" onClick={() => { localStorage.setItem("theme", "elegant"); dataset.bsCore = "elegant" }}>Elegant</button>
+                        <button class="btn btn-primary" type={"button"} onClick={() => { localStorage.setItem("theme", "elegant"); dataset.bsCore = "elegant" }}>Elegant</button>
                     </li>
                 </ul>
                 <hr class="sidebar-divider" />
 
-                <button class="btn btn-secondary" onClick={() => {localStorage.setItem("sidebar", "false"); location.reload()}}>Save & Close</button>
+                <button class="btn btn-secondary" type={"button"} onClick={() => {localStorage.setItem("sidebar", "false"); location.reload()}}>Save & Close</button>
 
                 <hr class="sidebar-divider" />
-                <label>About</label>
+                <h6>About</h6>
                 <p>halfPage is a minimalistic startpage, built on only open-source software.</p>
                 <a href="https://www.gethalfmoon.com/wttr">halfmoon</a>
                 <a href="https://github.com/chubin/wttr.in">wttr.in</a>
